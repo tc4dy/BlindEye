@@ -1,4 +1,14 @@
-    # 👁️ BlindEye OSINT Tool
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=BlindEye%20OSINT&fontSize=90&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Hunt%20Digital%20Footprints&descAlignY=60&descAlign=50" width="100%"/>
+  
+  <br/>
+  
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00F7F4&center=true&vCenter=true&width=600&lines=580%2B+Platforms+Supported;50%2B+Smart+Combinations;Multi-threaded+Scanning;Auto-save+Results" alt="Typing SVG" />
+</div>
+
+<br/>
+
+# 👁️ BlindEye OSINT Tool
 
 <div align="center">
 
@@ -478,5 +488,6 @@ python blindeye.py
 - 💾 **Otomatik Kayıt** - Ctrl+C ile durdurun, sonuçlar kaydedilir
 
 ---
+
 
 **Lisans**: MIT License - Detaylar için LICENSE dosyasına bakın
