@@ -1,21 +1,14 @@
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=BlindEye%20OSINT&fontSize=90&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Hunt%20Digital%20Footprints&descAlignY=60&descAlign=50" width="100%"/>
+
+  ██████╗ ██╗     ██╗███╗   ██╗██████╗ ███████╗██╗   ██╗███████╗
+  ██╔══██╗██║     ██║████╗  ██║██╔══██╗██╔════╝╚██╗ ██╔╝██╔════╝
+  ██████╔╝██║     ██║██╔██╗ ██║██║  ██║█████╗   ╚████╔╝ █████╗  
+  ██╔══██╗██║     ██║██║╚██╗██║██║  ██║██╔══╝    ╚██╔╝  ██╔══╝  
+  ██████╔╝███████╗██║██║ ╚████║██████╔╝███████╗   ██║   ███████╗
+
+  👁️ BlindEye OSINT Tool
+  🔍 Advanced OSINT Intelligence Gathering Tool
   
-  <br/>
-  
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00F7F4&center=true&vCenter=true&width=600&lines=580%2B+Platforms+Supported;50%2B+Smart+Combinations;Multi-threaded+Scanning;Auto-save+Results" alt="Typing SVG" />
-</div>
-
-<br/>
-
-# 👁️ BlindEye OSINT Tool
-
-<div align="center">
-
-![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macOS-lightgrey.svg)
-![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)
+Hunt down digital footprints across 580+ platforms with 50+ search combinations
 
 **🔍 Advanced OSINT Intelligence Gathering Tool**
 
@@ -491,3 +484,4 @@ python blindeye.py
 
 
 **Lisans**: MIT License - Detaylar için LICENSE dosyasına bakın
+
