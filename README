@@ -16,7 +16,6 @@ Hunt down digital footprints across 580+ platforms with 50+ search combinations
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Platforms](#-supported-platforms) • [Examples](#-examples)
 
-</div>
 
 ---
 
@@ -484,4 +483,5 @@ python blindeye.py
 
 
 **Lisans**: MIT License - Detaylar için LICENSE dosyasına bakın
+
 
