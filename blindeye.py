@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 BlindEye OSINT Tool
 Developed by @tc4dy
@@ -1054,4 +1053,5 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print(f"\n\n{Colors.RED}[!] Interrupted by user. Exiting...{Colors.ENDC}")
+
         sys.exit(0)
