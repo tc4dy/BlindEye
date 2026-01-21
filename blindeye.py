@@ -54,16 +54,16 @@ TRANSLATIONS = {
         'main_menu': 'MAIN MENU',
         'search_type': 'Select Search Type',
         'mode_1': 'Exact Match Search',
-        'mode_2': 'Partial Match Search (contains)',
-        'mode_3': 'RAGE MODE (Multi-target Deep Search)',
-        'mode_4': 'Exit',
+        'mode_2': 'Search by Category Match',
+        'mode_3': 'RAGE MODE (Single Target Deep Search)',
+        'mode_4': 'Bulk Username Search (Different Usernames)',
+        'mode_5': 'Exit',
         'enter_choice': 'Enter your choice',
         'input_type': 'Select Input Type',
         'input_username': 'Username/Nickname',
-        'input_realname': 'Real Name',
-        'input_both': 'Both (Username + Real Name)',
+        'input_both': 'Multiple Usernames',
         'enter_username': 'Enter username/nickname',
-        'enter_realname': 'Enter real name',
+        'enter_usernames': 'Enter usernames (separated by commas)',
         'enter_targets': 'Enter target names (min 3, max 12, separated by commas)',
         'invalid_targets': 'Please enter between 3 and 12 targets.',
         'searching': 'Searching',
@@ -89,7 +89,19 @@ TRANSLATIONS = {
         'timeout': 'TIMEOUT',
         'interrupted': 'Search interrupted by user (Ctrl+C)',
         'saving_progress': 'Saving current progress...',
-        'search_stopped': 'Search stopped. Returning to menu...'
+        'search_stopped': 'Search stopped. Returning to menu...',
+        'select_category': 'Select Category',
+        'cat_all': 'All Platforms',
+        'cat_social': 'Social Media',
+        'cat_gaming': 'Gaming',
+        'cat_dev': 'Developer/Tech',
+        'cat_finance': 'Finance/Crypto',
+        'cat_creative': 'Creative/Art',
+        'cat_forum': 'Forums/Communities',
+        'cat_messaging': 'Messaging',
+        'cat_video': 'Video Platforms',
+        'cat_music': 'Music',
+        'cat_shopping': 'Shopping/Marketplace'
     },
     'tr': {
         'banner': 'Gelişmiş OSINT İstihbarat Aracı',
@@ -102,16 +114,16 @@ TRANSLATIONS = {
         'main_menu': 'ANA MENÜ',
         'search_type': 'Arama Türünü Seçin',
         'mode_1': 'Tam Eşleşme Araması',
-        'mode_2': 'Kısmi Eşleşme Araması (içeren)',
-        'mode_3': 'ÖFKE MODU (Çoklu Hedef Derin Arama)',
-        'mode_4': 'Çıkış',
+        'mode_2': 'Kategoriye Göre Eşleşme Araması',
+        'mode_3': 'ÖFKE MODU (Tek Hedef Derin Arama)',
+        'mode_4': 'Toplu Kullanıcı Adı Araması (Farklı Kullanıcılar)',
+        'mode_5': 'Çıkış',
         'enter_choice': 'Seçiminizi girin',
         'input_type': 'Giriş Türünü Seçin',
         'input_username': 'Kullanıcı Adı/Takma Ad',
-        'input_realname': 'Gerçek İsim',
-        'input_both': 'Her İkisi (Kullanıcı Adı + Gerçek İsim)',
+        'input_both': 'Çoklu Kullanıcı Adı',
         'enter_username': 'Kullanıcı adı/takma ad girin',
-        'enter_realname': 'Gerçek isim girin',
+        'enter_usernames': 'Kullanıcı adlarını girin (virgülle ayrılmış)',
         'enter_targets': 'Hedef isimleri girin (min 3, max 12, virgülle ayrılmış)',
         'invalid_targets': 'Lütfen 3 ile 12 arasında hedef girin.',
         'searching': 'Aranıyor',
@@ -137,8 +149,119 @@ TRANSLATIONS = {
         'timeout': 'ZAMAN AŞIMI',
         'interrupted': 'Arama kullanıcı tarafından durduruldu (Ctrl+C)',
         'saving_progress': 'Mevcut ilerleme kaydediliyor...',
-        'search_stopped': 'Arama durduruldu. Menüye dönülüyor...'
+        'search_stopped': 'Arama durduruldu. Menüye dönülüyor...',
+        'select_category': 'Kategori Seçin',
+        'cat_all': 'Tüm Platformlar',
+        'cat_social': 'Sosyal Medya',
+        'cat_gaming': 'Oyun',
+        'cat_dev': 'Yazılım/Teknoloji',
+        'cat_finance': 'Finans/Kripto',
+        'cat_creative': 'Yaratıcı/Sanat',
+        'cat_forum': 'Forum/Topluluk',
+        'cat_messaging': 'Mesajlaşma',
+        'cat_video': 'Video Platformları',
+        'cat_music': 'Müzik',
+        'cat_shopping': 'Alışveriş/Pazar Yeri'
     }
+}
+
+PLATFORM_CATEGORIES = {
+    'social': [
+        "Twitter/X", "Facebook", "Instagram", "TikTok", "Threads", "Mastodon", "Bluesky", 
+        "VK", "OK.ru", "Weibo", "Douban", "Snapchat", "Likee", "Kuaishou", "MeWe", 
+        "Gab", "Parler", "Truth Social", "Clubhouse", "Xiaohongshu", "Naver", "Mixi",
+        "Blind", "Fishbowl", "Jodel", "Whisper", "ASKfm", "CuriousCat", "Tellonym",
+        "Retrospring", "Vent", "7Cups", "BeReal", "Poparazzi", "Renren", "Vero",
+        "Yubo", "Tagged", "Badoo", "Weverse", "Zepeto", "Minds", "Diaspora", "Ello",
+        "Steemit", "Hive", "Lemmy", "Kbin", "Pixelfed", "Cohost", "LiveJournal",
+        "Dreamwidth", "Pillowfort", "SpaceHey", "Gettr", "Plurk", "Taringa", "Skyrock",
+        "Hi5", "MyLife", "Netlog", "Friendster", "Cloob", "Tuenti", "Kwai", "Lapse",
+        "Sarahah", "NGL", "Sina Weibo", "Dcard", "Komica", "QQ Zone", "Mafengwo",
+        "YikYak", "OpenVK", "Sharkey", "Calckey", "Akkoma", "Firefish", "Friendica",
+        "Hubzilla", "GNU Social", "Prismo", "Pleroma", "Misskey", "Post.News", "WT.Social",
+        "CounterSocial", "Soapbox", "Micro.blog", "Koo", "Hive Social", "Fritter",
+        "SocialHub", "Movim", "Librem Social", "Fediverse", "StatusNet", "Parodify",
+        "Soapbox.pub", "OpenDiary", "FriendProject", "Piczo", "StudiVZ", "Facecast",
+        "Fanbase", "Minds Plus", "Known CMS", "SocialHome", "Locals", "TruthCommunity",
+        "Nextdoor"
+    ],
+    'gaming': [
+        "Steam", "Steam Community", "Twitch", "Kick", "Xbox Live", "PlayStation Network",
+        "Epic Games", "Battle.net", "Ubisoft Connect", "Riot Games", "EA", "Roblox",
+        "Minecraft Forums", "Hypixel", "CurseForge", "ModDB", "Nexus Mods", "Speedrun.com",
+        "Chess.com", "Lichess", "Faceit", "ESEA", "OpenRec", "DLive", "Trovo", "AfreecaTV",
+        "Smashcast", "GameJolt", "VRChat", "RecRoom", "IMVU", "Second Life", "Huya",
+        "Douyu", "NimoTV", "YouNow", "Picarto", "Mildom", "Planet Minecraft", "SpigotMC",
+        "Bukkit", "Scratch", "Modrinth", "TwitchTracker", "KickTracker", "SteamRep",
+        "GameFAQs", "Neoseeker", "ResetEra"
+    ],
+    'dev': [
+        "GitHub", "GitLab", "Bitbucket", "SourceForge", "CodePen", "JSFiddle", "Replit",
+        "StackOverflow", "StackExchange", "HackerRank", "LeetCode", "Codewars", "Kaggle",
+        "Docker Hub", "NPM", "PyPI", "RubyGems", "Maven", "Launchpad", "Gitea",
+        "Phabricator", "OpenHub", "FreeCodeCamp", "Dev.to", "Hashnode", "HackTheBox",
+        "TryHackMe", "Root-Me", "Exploit-DB", "Bugcrowd", "HackerOne", "OpenBugBounty",
+        "OWASP", "PentesterLab", "Codeforces", "AtCoder", "Spoj", "UVa Online Judge",
+        "Project Euler", "Hacker News", "Lobsters", "Slashdot", "Habr", "DevRant",
+        "CodeProject", "HackerEarth", "Bugzilla", "Jira", "Trello", "Asana", "Monday.com",
+        "ClickUp", "SourceHut", "FossHub", "GitHub Discussions", "GitLab Discussions",
+        "StackOverflow Teams", "StackOverflow Meta", "StackOverflow Chat", "GitHub Gists",
+        "GitLab Snippets", "Bitbucket Issues", "SourceForge Discussions", "Launchpad Bugs",
+        "Bugzilla Comments", "Trac Tickets", "Phabricator Tasks", "Confluence"
+    ],
+    'finance': [
+        "Binance", "Coinbase", "Kraken", "Blockchain.com", "Etherscan", "BscScan",
+        "CoinMarketCap", "CoinGecko", "TradingView", "eToro", "OpenSea", "Rarible",
+        "Foundation", "SuperRare", "Mirror.xyz", "Investing.com", "ForexFactory",
+        "MyFxBook", "Stripe", "Wise", "Revolut", "PayPal", "CashApp", "Venmo",
+        "Zerion", "CryptoPanic", "Bitfinex", "KuCoin", "Bitstamp", "LocalBitcoins",
+        "CryptoCompare", "Robinhood", "BitcoinTalk Market", "Polygonscan", "Zora",
+        "Sound.xyz", "Lens Protocol", "Farcaster", "Nostr", "Damus"
+    ],
+    'creative': [
+        "Behance", "Dribbble", "ArtStation", "DeviantArt", "Pixiv", "Pinterest",
+        "Flickr", "Unsplash", "Pexels", "500px", "Sketchfab", "Thingiverse", "Printables",
+        "Instructables", "Figma", "Canva", "WeHeartIt", "CGTrader", "TurboSquid",
+        "Shapeways", "Adobe Community", "Creative Fabrica", "Blender Artists", "Krita Artists",
+        "GIMP Chat"
+    ],
+    'forum': [
+        "Reddit", "4chan", "8kun", "Disqus", "Quora", "SomethingAwful", "Bitcointalk",
+        "HackForums", "BlackHatWorld", "XDA Developers", "LinuxQuestions", "ArchLinux Forum",
+        "Ubuntu Forums", "BoardGameGeek", "MetaFilter", "LowEndTalk", "WildersSecurity",
+        "MajorGeeks", "MalwareTips", "Sysnative", "Gentoo Forum", "Kali Forum",
+        "Offensive Security", "WebHostingTalk", "DigitalPoint", "WarriorForum", "SitePoint",
+        "PrivacyGuides", "PenTesters", "KiwiFarms", "Lolcow", "Voat Archive", "Flarum",
+        "Vanilla Forums", "Discourse", "NodeBB", "XenForo", "ProBoards", "Forumotion",
+        "Tapatalk", "Talkyard", "Coral Talk", "Hyvor Talk", "Isso", "Commento", "Muut",
+        "Enjin", "ElkArte", "bbPress", "PunBB", "FluxBB", "Phorum", "WoltLab", "IP.Board",
+        "Invision", "MyBB", "SMF", "Burning Board", "Zetaboards", "Lefora", "Snitz",
+        "Forumer", "GroupServer", "Google Groups", "Yahoo Groups", "Mailman", "Usenet",
+        "Amino Communities", "Urban Dictionary", "FunnyJunk", "Memedroid"
+    ],
+    'messaging': [
+        "Telegram", "Discord", "Matrix", "Signal", "QQ", "Line", "Kakao", "WeChat",
+        "WhatsApp", "Gitter", "SimpleX", "TeamSpeak", "Mumble", "Ventrilo", "RaidCall",
+        "Slack", "RocketChat", "Mattermost", "Zulip", "Session", "Element", "Revolt.chat",
+        "Manyverse", "Scuttlebutt", "Retroshare", "Aether", "Guilded"
+    ],
+    'video': [
+        "YouTube", "YouTube Gaming", "Vimeo", "DailyMotion", "Veoh", "DTube", "Odysee",
+        "Rumble", "Bitchute", "PeerTube", "Brightcove", "Vevo", "TikTok Live", "Facebook Gaming",
+        "Twitch Clips", "Kick Clips", "Twitter Spaces", "Reddit Talk"
+    ],
+    'music': [
+        "SoundCloud", "Bandcamp", "Mixcloud", "Last.fm", "Spotify", "Podbean", "Spreaker",
+        "Castbox", "Podchaser", "Audius", "RateYourMusic", "Discogs", "Jamendo", "Resonate",
+        "Fountain", "Apple Music", "Spotify Community", "Tidal", "Mixlr", "Anchor",
+        "Fireside", "Airchat", "Callin", "Stationhead", "ConcertWindow"
+    ],
+    'shopping': [
+        "Fiverr", "Upwork", "Freelancer", "Toptal", "Etsy", "eBay", "Gumroad", "Ko-fi",
+        "Patreon", "BuyMeACoffee", "Creative Market", "ThemeForest", "CodeCanyon", "Envato",
+        "LemonSqueezy", "Paddle", "PeoplePerHour", "Guru", "Amazon Seller", "AliExpress",
+        "Alibaba", "OpenCollective", "Itch.io"
+    ]
 }
 
 PLATFORMS = [
@@ -771,6 +894,45 @@ def signal_handler(sig, frame):
     print(f"\n{Colors.RED}[!] Exiting BlindEye...{Colors.ENDC}")
     sys.exit(0)
 
+def get_filtered_platforms(category):
+    if category == 'all':
+        return PLATFORMS
+    
+    category_names = PLATFORM_CATEGORIES.get(category, [])
+    return [p for p in PLATFORMS if p['name'] in category_names]
+
+def select_category():
+    print(f"\n{Colors.YELLOW}{LANG['select_category']}:{Colors.ENDC}")
+    print(f"{Colors.WHITE}[1] {LANG['cat_all']}")
+    print(f"[2] {LANG['cat_social']}")
+    print(f"[3] {LANG['cat_gaming']}")
+    print(f"[4] {LANG['cat_dev']}")
+    print(f"[5] {LANG['cat_finance']}")
+    print(f"[6] {LANG['cat_creative']}")
+    print(f"[7] {LANG['cat_forum']}")
+    print(f"[8] {LANG['cat_messaging']}")
+    print(f"[9] {LANG['cat_video']}")
+    print(f"[10] {LANG['cat_music']}")
+    print(f"[11] {LANG['cat_shopping']}{Colors.ENDC}\n")
+    
+    choice = input(f"{Colors.GREEN}[{LANG['enter_choice']}]> {Colors.ENDC}").strip()
+    
+    category_map = {
+        '1': 'all',
+        '2': 'social',
+        '3': 'gaming',
+        '4': 'dev',
+        '5': 'finance',
+        '6': 'creative',
+        '7': 'forum',
+        '8': 'messaging',
+        '9': 'video',
+        '10': 'music',
+        '11': 'shopping'
+    }
+    
+    return category_map.get(choice, 'all')
+
 def generate_variations(name):
     variations = set()
     variations.add(name)
@@ -883,7 +1045,7 @@ def search_comments_mentions(username, results, lock):
         except Exception:
             pass
 
-def deep_search(targets, mode, results, lock):
+def deep_search(targets, mode, results, lock, platforms):
     for target in targets:
         if stop_flag.is_set():
             break
@@ -896,7 +1058,7 @@ def deep_search(targets, mode, results, lock):
                 
             with ThreadPoolExecutor(max_workers=20) as executor:
                 futures = []
-                for platform in PLATFORMS:
+                for platform in platforms:
                     if stop_flag.is_set():
                         break
                         
@@ -968,43 +1130,37 @@ def main():
         print(f"{Colors.WHITE}[1] {LANG['mode_1']}")
         print(f"[2] {LANG['mode_2']}")
         print(f"[3] {LANG['mode_3']}")
-        print(f"[4] {LANG['mode_4']}{Colors.ENDC}\n")
+        print(f"[4] {LANG['mode_4']}")
+        print(f"[5] {LANG['mode_5']}{Colors.ENDC}\n")
         
         mode = input(f"{Colors.GREEN}[{LANG['enter_choice']}]> {Colors.ENDC}").strip()
         
-        if mode == '4':
+        if mode == '5':
             print(f"\n{Colors.RED}[!] Exiting BlindEye...{Colors.ENDC}")
             sys.exit(0)
         
-        if mode not in ['1', '2', '3']:
+        if mode not in ['1', '2', '3', '4']:
             print(f"{Colors.RED}[!] {LANG['invalid_choice']}{Colors.ENDC}")
             continue
         
-        mode = int(mode)
+        mode_int = int(mode)
         
-        if mode != 3:
-            print(f"\n{Colors.YELLOW}{LANG['input_type']}:{Colors.ENDC}")
-            print(f"{Colors.WHITE}[1] {LANG['input_username']}")
-            print(f"[2] {LANG['input_realname']}")
-            print(f"[3] {LANG['input_both']}{Colors.ENDC}\n")
-            
-            input_type = input(f"{Colors.GREEN}> {Colors.ENDC}").strip()
-            
-            targets = []
-            if input_type in ['1', '3']:
-                username = input(f"\n{Colors.CYAN}[{LANG['enter_username']}]> {Colors.ENDC}").strip()
-                targets.append(username)
-            
-            if input_type in ['2', '3']:
-                realname = input(f"{Colors.CYAN}[{LANG['enter_realname']}]> {Colors.ENDC}").strip()
-                targets.append(realname)
-        else:
+        category = select_category()
+        platforms = get_filtered_platforms(category)
+        
+        if mode == '4':
+            usernames_input = input(f"\n{Colors.CYAN}[{LANG['enter_usernames']}]> {Colors.ENDC}").strip()
+            targets = [t.strip() for t in usernames_input.split(',')]
+        elif mode == '3':
             targets_input = input(f"\n{Colors.CYAN}[{LANG['enter_targets']}]> {Colors.ENDC}").strip()
             targets = [t.strip() for t in targets_input.split(',')]
             
             if len(targets) < 3 or len(targets) > 12:
                 print(f"{Colors.RED}[!] {LANG['invalid_targets']}{Colors.ENDC}")
                 continue
+        else:
+            username = input(f"\n{Colors.CYAN}[{LANG['enter_username']}]> {Colors.ENDC}").strip()
+            targets = [username]
         
         global global_results, stop_flag
         stop_flag.clear()
@@ -1026,7 +1182,7 @@ def main():
         print(f"{Colors.YELLOW}[*] Press Ctrl+C to stop and save results{Colors.ENDC}")
         print(f"{Colors.MAGENTA}{'='*70}{Colors.ENDC}\n")
         
-        deep_search(targets, mode, results, lock)
+        deep_search(targets, mode_int, results, lock, platforms)
         
         if stop_flag.is_set():
             print(f"\n{Colors.YELLOW}[!] {LANG['search_stopped']}{Colors.ENDC}")
@@ -1053,5 +1209,4 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print(f"\n\n{Colors.RED}[!] Interrupted by user. Exiting...{Colors.ENDC}")
-
         sys.exit(0)
