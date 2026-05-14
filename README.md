@@ -86,7 +86,7 @@ Hunt down digital footprints across 580+ platforms with 50+ search combinations
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/blindeye.git
+git clone https://github.com/tc4dy/BlindEye
 
 # Navigate to directory
 cd blindeye
@@ -101,7 +101,7 @@ python blindeye.py
 ### Windows Users
 
 ```cmd
-git clone https://github.com/yourusername/blindeye.git
+git clone https://github.com/tc4dy/BlindEye
 cd blindeye
 pip install -r requirements.txt
 python blindeye.py
@@ -110,7 +110,7 @@ python blindeye.py
 ### Linux/macOS Users
 
 ```bash
-git clone https://github.com/yourusername/blindeye.git
+git clone https://github.com/tc4dy/BlindEye
 cd blindeye
 pip3 install -r requirements.txt
 python3 blindeye.py
