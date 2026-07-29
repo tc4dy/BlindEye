@@ -1,16 +1,10 @@
 
-  ██████╗ ██╗     ██╗███╗   ██╗██████╗ ███████╗██╗   ██╗███████╗
-  ██╔══██╗██║     ██║████╗  ██║██╔══██╗██╔════╝╚██╗ ██╔╝██╔════╝
-  ██████╔╝██║     ██║██╔██╗ ██║██║  ██║█████╗   ╚████╔╝ █████╗  
-  ██╔══██╗██║     ██║██║╚██╗██║██║  ██║██╔══╝    ╚██╔╝  ██╔══╝  
-  ██████╔╝███████╗██║██║ ╚████║██████╔╝███████╗   ██║   ███████╗
-
-  👁️ BlindEye OSINT Tool
-  🔍 Advanced OSINT Intelligence Gathering Tool
+# 👁️ BlindEye Basic OSINT Tool
+## 🔍 OSINT Intelligence Gathering Tool
   
 Hunt down digital footprints across 580+ platforms with 50+ search combinations
 
-**🔍 Advanced OSINT Intelligence Gathering Tool**
+**🔍 Non-Prof OSINT Intelligence Gathering Tool**
 
 *Hunt down digital footprints across 580+ platforms with 50+ search combinations*
 
